@@ -9,6 +9,7 @@ module Stripe
       :api_key,
       :idempotency_key,
       :stripe_account,
+      :is_stripe_account_required,
       :stripe_version
     ].freeze
 

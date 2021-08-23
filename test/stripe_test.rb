@@ -77,6 +77,13 @@ class StripeTest < Test::Unit::TestCase
       assert_equal "acct_1234", Stripe.stripe_account
     end
 
+    should "allow stripe account to be required" do
+      Stripe.is_stripe_account_required = true
+      expect {
+        Stripe::Subscription.list
+      }.to raise_error()
+    end
+
     should "allow enable_telemetry to be configured" do
       begin
         old = Stripe.enable_telemetry?

@@ -68,6 +68,7 @@ module Stripe
     def_delegators :@config, :api_key, :api_key=
     def_delegators :@config, :api_version, :api_version=
     def_delegators :@config, :stripe_account, :stripe_account=
+    def_delegators :@config, :is_stripe_account_required, :is_stripe_account_required=
     def_delegators :@config, :api_base, :api_base=
     def_delegators :@config, :uploads_base, :uploads_base=
     def_delegators :@config, :connect_base, :connect_base=

@@ -31,6 +31,7 @@ module Stripe
     attr_accessor :enable_telemetry
     attr_accessor :logger
     attr_accessor :stripe_account
+    attr_accessor :is_stripe_account_required
 
     attr_reader :api_base
     attr_reader :uploads_base

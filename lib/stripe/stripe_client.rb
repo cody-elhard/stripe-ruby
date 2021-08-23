@@ -873,6 +873,7 @@ module Stripe
       end
 
       headers["Stripe-Version"] = config.api_version if config.api_version
+      throw StandardError('Stripe account was not set') if config.is_stripe_account_required && config.stripe_account.nil?
       headers["Stripe-Account"] = config.stripe_account if config.stripe_account
 
       user_agent = @system_profiler.user_agent
